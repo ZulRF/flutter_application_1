@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/models/category_model.dart';
 import 'package:flutter_application_1/widgets/category_item_box.dart';
 
+// Halaman utama aplikasi
+// Menggunakan StatelessWidget karena tidak ada state yang perlu dikelola
 class HomePage extends StatelessWidget {
   final TextEditingController _controller = TextEditingController();
 

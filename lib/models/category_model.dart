@@ -12,6 +12,7 @@ class CategoryItem {
   });
 }
 
+// daftar kategori item yang akan ditampilkan
 List<CategoryItem> categoryItems = [
   CategoryItem(
     title: 'Makanan',

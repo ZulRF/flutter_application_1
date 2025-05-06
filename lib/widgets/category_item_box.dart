@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+// kelas CategoryItemBox
+// digunakan untuk menampilkan item kategori dengan gambar, judul, waktu, dan deskripsi
 class CategoryItemBox extends StatefulWidget {
   final String title; // menambahkan title ke constructor
   final String time; // menambahkan time ke constructor
@@ -19,6 +21,8 @@ class CategoryItemBox extends StatefulWidget {
   _CategoryItemBoxState createState() => _CategoryItemBoxState();
 }
 
+// kelas _CategoryItemBoxState
+// digunakan untuk mengatur status dari CategoryItemBox
 class _CategoryItemBoxState extends State<CategoryItemBox> {
   bool _showDescription =
       false; // menambahkan variabel untuk menyimpan status deskripsi
@@ -64,19 +68,24 @@ class _CategoryItemBoxState extends State<CategoryItemBox> {
                       child: Icon(Icons.image, color: Colors.white),
                     ),
               ),
-              SizedBox(height: 8),
+              SizedBox(height: 8), // menambahkan jarak antara gambar dan teks
               Text(
+                // menambahkan judul kategori
                 widget.title,
                 style: TextStyle(fontWeight: FontWeight.bold),
               ), // menambahkan style untuk title
-              SizedBox(height: 4),
+              SizedBox(height: 4), // menambahkan jarak antara judul dan waktu
               Text(
+                // menambahkan waktu kategori
                 widget.time,
                 style: TextStyle(fontSize: 12, color: Colors.grey[600]),
               ),
               if (_showDescription) ...[
-                SizedBox(height: 8),
+                SizedBox(
+                  height: 8,
+                ), // menambahkan jarak antara waktu dan deskripsi
                 Text(
+                  // menambahkan deskripsi kategori
                   widget.desc, //  menambahkan deskripsi
                   style: TextStyle(fontSize: 12),
                   textAlign: TextAlign.center,
