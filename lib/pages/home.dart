@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         // AppBar dengan tombol menu dan pengaturan dan judul
-        title: Text('My Random App'),
+        title: Text('Foods!'),
         leading: Builder(
           builder: (BuildContext context) {
             //menggunakan Builder untuk mendapatkan context yang berisi Scaffold
