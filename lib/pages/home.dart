@@ -91,6 +91,7 @@ class HomePage extends StatelessWidget {
               title: categoryItems[index].title, // Memasukkan title
               time: categoryItems[index].time, // Memasukkan time
               desc: categoryItems[index].desc, // Memasukkan desc
+              imageUrl: categoryItems[index].imageUrl, // Memasukkan imageUrl
             ),
           ),
         );
@@ -101,7 +102,12 @@ class HomePage extends StatelessWidget {
   /// Membuat item grid yang berisi informasi kategori
   Widget _buildGridItem(int index) {
     final item = categoryItems[index];
-    return CategoryItemBox(title: item.title, time: item.time, desc: item.desc);
+    return CategoryItemBox(
+      title: item.title,
+      time: item.time,
+      desc: item.desc,
+      imageUrl: item.imageUrl,
+    ); // Memasukkan title, time, desc, dan imageUrl
   }
 
   // Membuat drawer Sidebar dengan menu Home dan Explain

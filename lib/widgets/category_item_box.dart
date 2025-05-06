@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CategoryItemBox extends StatefulWidget {
   final String title; // menambahkan title ke constructor
   final String time; // menambahkan time ke constructor
   final String desc; //  menambahkan desc ke constructor
+  final String imageUrl; // menambahkan imageUrl
 
   const CategoryItemBox({
     Key? key,
     required this.title,
     required this.time,
     required this.desc,
+    required this.imageUrl,
   }) : super(key: key);
 
   @override
@@ -48,11 +51,18 @@ class _CategoryItemBoxState extends State<CategoryItemBox> {
                 MainAxisAlignment
                     .start, // menambahkan mainAxisAlignment untuk mengatur posisi kolom
             children: [
-              Container(
+              SvgPicture.asset(
+                // menambahkan gambar SVG
+                widget.imageUrl,
                 width: 70,
                 height: 70,
-                color: Colors.grey[300],
-                child: Icon(Icons.image, color: Colors.white, size: 35),
+                placeholderBuilder:
+                    (context) => Container(
+                      width: 70,
+                      height: 70,
+                      color: Colors.grey[300],
+                      child: Icon(Icons.image, color: Colors.white),
+                    ),
               ),
               SizedBox(height: 8),
               Text(
